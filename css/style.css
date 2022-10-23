@@ -22,6 +22,10 @@ html{
   scroll-behavior: smooth;
 }
 
+body{
+  position: relative;
+}
+
 .containerHeader{
   position: relative;
   width: 100%;
@@ -33,6 +37,11 @@ html{
 .containerHeader header{
   padding: 20px 5% 40px;
 }
+
+.containerHeader header.active{
+  background: #fff;
+}
+
 
 .containerHeader header{
   position: fixed;
@@ -70,7 +79,7 @@ header ul li a{
 section{
   padding: 0px 5%;
   margin-bottom: 6rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section .gridHome{
@@ -270,7 +279,6 @@ section#Services .gridServices .itemService:hover a{
 section#OurWorks{
   position: relative;
   padding: 0px 15%;
-  height: 150vh;
 }
 
 section#OurWorks .boxTittleOurWork{
@@ -295,9 +303,25 @@ section#OurWorks .gridOurWorks{
 
 section#OurWorks .gridOurWorks .itemWork{
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-section#OurWorks .gridOurWorks .itemWork img{
+section#OurWorks .gridOurWorks .itemWork .boxImgWork{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+
+section#OurWorks .gridOurWorks .itemWork .contentWork{
+  position: absolute;
+  bottom: 0;
+}
+
+section#OurWorks .gridOurWorks .itemWork .boxImgWork img{
+  position: absolute;
+  width: 100%;
+  height:100%;
   border-radius: 12px;
 }
 
@@ -352,10 +376,11 @@ section#Clients{
 
 section#Clients .gridClients{
   position: relative;
-  top: 25%;
+  top: 20%;
   display: grid;
   grid-template-columns: 60% 40%;
-  column-gap: 50px;
+  grid-template-rows: repeat(2,1fr);
+  /* column-gap: 50px; */
   align-items: center;
 }
 
@@ -401,3 +426,294 @@ section#Clients .gridClients .photosClients .boxImgClients{
   align-items: center;
   row-gap: 15px;
 }
+
+section#Clients .messageEdiClients{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  gap: 20px;
+}
+
+section#Clients .messageEdiClients p{
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+section#Clients .messageEdiClients .userComment{
+  display: grid;
+  grid-template-columns: 13% 87%;
+  /* column-gap: 10px; */
+}
+
+section#Clients .messageEdiClients .userComment img{
+  width: 70px;
+  height: 70px;
+}
+
+section#Clients .messageEdiClients .userComment .contentUser{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+section#Clients .messageEdiClients .userComment .contentUser span:nth-child(1){
+  color: #333333;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+section#Clients .messageEdiClients .userComment .contentUser span:nth-child(2){
+  color: #828282;
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 400px;
+  grid-template-rows: 1fr;
+  background: #100E1D;
+  padding: 30px;
+}
+
+footer .footerMenuHeader{
+  position: relative;
+}
+
+footer .footerMenuHeader ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+footer .footerMenuHeader ul li{
+  position: relative;
+  display: flex;
+}
+
+footer .footerMenuHeader ul li::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:0%;
+  height: 2px;
+  background: var(--color-links);
+  transition: 1s all ease;
+}
+
+footer .footerMenuHeader ul li:hover::before{
+  width:100%;
+}
+
+footer .footerMenuHeader ul li a{
+  color: #fff;
+  font-weight: 400;
+}
+
+footer .socialNeetworks{
+ display: flex;
+ flex-direction: column;
+}
+
+footer .socialNeetworks h2{
+  font-family: 'Heebo', sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+footer .socialNeetworks ul{
+  display: inline-flex;
+  gap: 10px;
+}
+
+footer .socialNeetworks ul li{
+  position: relative;
+  display: flex;
+}
+
+footer .socialNeetworks ul li::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width:0%;
+  height: 2px;
+  background: var(--color-links);
+  transition: 1s all ease;
+}
+
+
+footer .socialNeetworks ul li:hover::before{
+  width:100%;
+}
+
+footer .socialNeetworks ul li a{
+  font-size: 1.8rem;
+}
+
+
+footer .socialNeetworks ul li a i{
+  color: #fff;
+}
+
+footer .footerContact span{
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+footer .footerContact form .boxEmail{
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+}
+
+footer .footerContact form input{
+  position: relative;
+  outline: none;
+  border: none;
+  background: #F2F2F2;
+  border-radius: 12px;
+  padding: 10px 90px 10px 20px;
+  width: 100%;
+}
+
+footer .footerContact form button{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  background: var(--color-links);
+  padding: 5px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+footer .creator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 3rem;
+  grid-column: span 3;
+}
+
+footer .creator p{
+  color: #cfcfcf;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+footer .creator p span{
+  position: relative;
+}
+
+footer .creator p span a{
+  color: #BDBDBD;
+  transition: 2s all ease;
+}
+
+footer .creator p span a{
+  cursor: pointer;
+}
+
+footer .creator p span::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-links);
+  transition: 1s all ease;
+}
+
+footer .creator p span:hover::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-links);
+}
+
+footer .creator p span:hover a{
+  color: var(--color-links);
+}
+
+
+/* 
+@media (max-width: 1600px){
+
+  section#OurWorks {
+    position: relative;
+    padding: 0px 10%;
+    height: 150vh;
+  }
+
+  section#OurWorks .gridOurWorks {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    gap: 50px;
+  }
+}
+*/
+
+@media (max-width: 1650px){
+
+  section#OurWorks {
+    position: relative;
+    padding: 0px 10%;
+  }
+
+  section#OurWorks .gridOurWorks .itemWork .boxImgWork img{
+    object-fit: cover;
+  }
+} 
+
+
+@media (max-width: 1500px){
+  section#OurWorks .gridOurWorks .itemWork:nth-child(odd) {
+    top: 0;
+  }
+
+  section#Clients .gridClients .photosClients img {
+    width: 180px;
+    height: 180px;
+  }
+} 
+
+@media (max-width: 1400px){
+
+  section#Clients .gridClients .photosClients img {
+    width: 160px;
+    height: 160px;
+    border-radius: 24px;
+  }
+} 
+
+@media (max-width: 1200px){
+
+  section#Clients .gridClients .photosClients img {
+    width: 140px;
+    height: 140px;
+  }
+} 
