@@ -746,6 +746,30 @@ footer .footerContact form button{
 
 @media (max-width: 1000px){
 
+  section#OurWorks .gridOurWorks {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: minmax(500px, auto);
+  }
+
+  section .gridHome {
+    position: relative;
+    display: grid;
+    grid-template-rows: 300px 450px 300px;
+    row-gap: 10px;
+  }
+
+  section .gridHome .boxImgHome {
+    position: relative;
+  }
+
+  section .gridHome .boxImgHome img {
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
   section#Services {
     padding: 0px 1%;
   }
@@ -839,6 +863,21 @@ footer .footerContact form button{
 
 @media (max-width: 800px){
 
+
+  section .gridHome {
+    grid-template-rows: 280px 300px 300px;
+  }
+
+  section .gridHome .storyHome {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 15%;
+    max-width: 900px;
+  }
+
+
   section#Clients .gridClients .photosClients img {
     width: 120px;
     height: 120px;
@@ -865,9 +904,24 @@ footer .footerContact form button{
 
 } 
 
-@media (max-width: 1000px){
-  section#OurWorks .gridOurWorks {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-auto-rows: minmax(500px, auto);
+
+@media (max-width: 650px){
+
+  section .gridHome .itemHomeHead {
+    padding: 0px 1%;
+  }
+
+  section .gridHome .storyHome {
+    padding: 20px 1%;
+  }
+
+  section .gridHome {
+    grid-template-rows: 270px 200px 420px;
+  }
+}
+
+@media (max-width: 450px){
+  section .gridHome {
+    grid-template-rows: 270px 110px 410px;
 }
 }
