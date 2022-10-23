@@ -671,19 +671,9 @@ footer .creator p span:hover a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 10%;
   }
   
 
-  section#OurWorks {
-    position: relative;
-    padding: 0px 10%;
-  }
-
-  section#Clients {
-    position: relative;
-    padding: 60px 10% 0px;
-}
 
   section#OurWorks .gridOurWorks .itemWork .boxImgWork img{
     object-fit: cover;
@@ -737,6 +727,22 @@ footer .creator p span:hover a{
 
 @media (max-width: 1000px){
 
+  section#Services {
+    padding: 0px 1%;
+  }
+
+  section#OurWorks {
+    padding: 0px 1%;
+    margin-bottom: 4rem;
+  }
+
+  section#Clients {
+    padding: 0px 1%;
+  }
+
+  section#Contact {
+    padding: 0px 1%;
+  }
 
   header i{
     display: block;
@@ -744,6 +750,7 @@ footer .creator p span:hover a{
     visibility: visible;
     font-size: 2rem;
     z-index: 9999;
+    cursor: pointer;
   }
   
   header nav{
@@ -768,10 +775,6 @@ footer .creator p span:hover a{
 
   header nav.active ul{
     flex-direction: column;
-  }
-
-  section{
-    padding: 0px 1%;
   }
 
 
