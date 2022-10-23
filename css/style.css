@@ -713,6 +713,7 @@ footer .footerContact form button{
 
 
 @media (max-width: 1500px){
+  
   section#OurWorks .gridOurWorks .itemWork:nth-child(odd) {
     top: 0;
   }
@@ -742,9 +743,44 @@ footer .footerContact form button{
     height: 140px;
     border-radius: 24px;
   }
+
 } 
 
 @media (max-width: 1000px){
+
+  header i{
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    font-size: 2rem;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  
+  header nav{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  header nav.active{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: #fff;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  header nav.active ul{
+    flex-direction: column;
+  }
+
 
   section#OurWorks .gridOurWorks {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -787,40 +823,6 @@ footer .footerContact form button{
     padding: 0px 1%;
   }
 
-  header i{
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    font-size: 2rem;
-    z-index: 9999;
-    cursor: pointer;
-  }
-  
-  header nav{
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  header nav.active{
-    position: fixed;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    background: #fff;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  header nav.active ul{
-    flex-direction: column;
-  }
-
-
   section#Clients .gridClients .boxTittleClients {
     max-width: 100%;
   }
@@ -847,6 +849,10 @@ footer .footerContact form button{
   section#Clients .messageEdiClients .userComment img {
     width: 50px;
     height: 50px;
+  }
+
+  footer {
+    padding: 10% 10%;
   }
 
 }

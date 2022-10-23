@@ -21,7 +21,3 @@ document.addEventListener("click", (e) =>{
     $nav.classList.remove("active");
   }
 })
-
-document.addEventListener("DOMContentLoaded", () =>{
-  alert("su pantalla es de " + w.screen.width + " ancho y alto " + w.screen.height);
-})
