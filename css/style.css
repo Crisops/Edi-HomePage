@@ -199,7 +199,7 @@ section#Services h2{
 
 section#Services .gridServices{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
   column-gap: 10px;
 }
 
@@ -446,7 +446,7 @@ section#Clients .messageEdiClients p{
 section#Clients .messageEdiClients .userComment{
   display: grid;
   grid-template-columns: 13% 87%;
-  /* column-gap: 10px; */
+  column-gap: 10px;
 }
 
 section#Clients .messageEdiClients .userComment img{
@@ -658,35 +658,42 @@ footer .creator p span:hover a{
 }
 
 
-/* 
-@media (max-width: 1600px){
-
-  section#OurWorks {
-    position: relative;
-    padding: 0px 10%;
-    height: 150vh;
-  }
-
-  section#OurWorks .gridOurWorks {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
-    gap: 50px;
-  }
-}
-*/
 
 @media (max-width: 1650px){
 
+  section#Services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 10%;
+  }
+  
+
   section#OurWorks {
     position: relative;
     padding: 0px 10%;
   }
+
+  section#Clients {
+    position: relative;
+    padding: 60px 10% 0px;
+}
 
   section#OurWorks .gridOurWorks .itemWork .boxImgWork img{
     object-fit: cover;
   }
+
+  section#Clients .messageEdiClients {
+    position: absolute;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    gap: 20px;
+  }
+
+
 } 
 
 
@@ -702,6 +709,9 @@ footer .creator p span:hover a{
 } 
 
 @media (max-width: 1400px){
+  section {
+    margin-bottom: 0;
+  }
 
   section#Clients .gridClients .photosClients img {
     width: 160px;
@@ -715,5 +725,82 @@ footer .creator p span:hover a{
   section#Clients .gridClients .photosClients img {
     width: 140px;
     height: 140px;
+    border-radius: 24px;
   }
 } 
+
+@media (max-width: 1000px){
+
+  section{
+    padding: 0px 1%;
+  }
+
+
+  section#Clients .gridClients .boxTittleClients {
+    max-width: 100%;
+  }
+
+  section#Clients .gridClients {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  section#Clients .messageEdiClients {
+    bottom: 0%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  section#Clients .messageEdiClients p {
+    color: #333333;
+    font-size: .7rem;
+    font-weight: 500;
+  }
+
+  section#Clients .messageEdiClients .userComment img {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media (max-width: 900px){
+
+  section#Clients .gridClients .photosClients img {
+    width: 130px;
+    height: 130px;
+    border-radius: 24px;
+  }
+
+} 
+
+@media (max-width: 800px){
+
+  section#Clients .gridClients .photosClients img {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+  }
+
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  footer .socialNeetworks {
+    align-items: center;
+  }
+
+  .footerContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+} 
+
